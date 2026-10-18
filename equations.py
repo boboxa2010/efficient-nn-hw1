@@ -1,9 +1,9 @@
 def flops(image_size, batch): 
-    pass
+    return batch * (17712 * image_size**2 + 313344)
 
 
-def memory(image_size, batch): 
-    pass
+def memory(image_size, batch):
+    return 4181312 + 76 * batch * image_size**2
 
 
 def latency(image_size, batch, theta):
