@@ -1,6 +1,7 @@
 import torch
 from torch import nn
 
+
 def get_model():
     return nn.Sequential(
         nn.Conv2d(3, 32, (7, 7), stride=(2, 2), padding=(3, 3), bias=False),
@@ -32,5 +33,5 @@ def get_model():
         nn.Flatten(),
         nn.Linear(512, 256),
         nn.ReLU(inplace=True),
-        nn.Linear(256, 100)
+        nn.Linear(256, 100),
     )
